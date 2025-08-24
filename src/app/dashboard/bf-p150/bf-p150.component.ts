@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import * as pdfMake from 'pdfmake/build/pdfmake';
 import * as pdfFonts from 'pdfmake/build/vfs_fonts';
-(pdfMake as any).vfs = pdfFonts.vfs;
+(pdfMake as any).vfs = pdfFonts;
 import { CommonModule, formatDate } from '@angular/common';
 import { Renderer2 } from '@angular/core';
 import { Location } from '@angular/common';
