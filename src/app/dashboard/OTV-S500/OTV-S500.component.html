@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap" rel="stylesheet">
+</head>
+<body class="mt-5 mx-5">
+  <form [formGroup]="formGroup" id="table">
+    <div class="text-center mb-5 mt-5 mx-5">
+      <h2 >OTV-S500</h2>
+    </div>
+    <table class="table table-border">
+      <thead class="text-center">
+        <tr>
+          <th scope="col" >DEMO/LOANER:</th>
+          <td scope="col" ><select style="border-radius: 10px; width: 140px;" formControlName="delo" default="select"><option value="Demo">Demo</option><option value="Loaner">Loaner</option></select></td>
+          <th scope="col" >SERIAL NUMBER:</th>
+          <td scope="col" ><input style="border-radius: 10px;" type="text" formControlName="sn_o" autocomplete="off"></td>
+        </tr>
+        <tr>
+          <th scope="col" >CDS DATE:</th>
+          <td scope="col" ><input style="border-radius: 10px;" type="date" formControlName="cds_date" autocomplete="off"></td>
+          <th scope="col" >CDS DONE BY:</th>
+          <td scope="col" ><input style="border-radius: 10px;" type="text" formControlName="cds_by" autocomplete="off"></td>
+        </tr>
+      </thead>
+    </table>
+    <table class="table table-bordered">
+      <thead class="text-center">
+        <tr>
+          <th scope="col">S.NO</th>
+          <th scope="col">INSPECTION ITEM</th>
+          <th scope="col">INSPECTION STANDARD</th>
+          <th scope="col">INSPECTION RESULT</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th class="text-center" scope="row">1</th>
+            <td>All reset </td>
+            <td>In this operation, delete all settings and images and put the video system centre in the 
+              state at the time of delivery. </td>
+            <td class="text-center">Pass<input type="radio" formControlName="s1_result" id="s1_result_pass" value="Pass">
+            Fail<input type="radio" formControlName="s1_result" id="s1_result_fail" value="Fail"></td>
+        </tr>
+        <tr>
+          <th class="text-center" scope="row">2</th>
+          <td>Connection of an 
+endoscope (Videoscope 
+& Fiber scope &   
+Rigid endoscope and 
+Camera Head) </td>
+          <td>1. Confirm that the video system centre and all connected devices are turned OFF. <br>2. Confirm that the electrical contacts of the video connector/Camera head not damaged <br>3. Insert the light guide connector of videoscope into the output socket of the light 
+            source until it stops. <br>
+            4. Confirm that the “UP” mark of video connector faces upward and push the video  
+            connector into the video connector socket of video system centre all the way until it 
+            clicks <br>5. Attach the camera head to the eyepiece section of the fiberscope <br>6. Attach the camera head to the rigid endoscope. </td>
+            <td class="text-center">Pass<input type="radio" formControlName="s2_result" id="s2_result_pass" value="Pass">
+                Fail<input type="radio" formControlName="s2_result" id="s2_result_fail" value="Fail"></td>
+        </tr>
+        <tr>
+          <th class="text-center" scope="row">3</th>
+          <td>Inspection of the power supply </td>
+          <td>1. Confirm that the ventilation grilles on the right side and rear side panels of the video 
+            system center are not covered with dust or other materials. <br>2. Press the power switch of the video system center. The power indicator lights up. 
+            Confirm that the Olympus-logo is displayed on the touch panel. <br>3. Confirm that air is exhausted by holding your hand in front of the ventilation grilles </td>
+            <td class="text-center">Pass<input type="radio" formControlName="s3_result" id="s3_result_pass" value="Pass">
+                Fail<input type="radio" formControlName="s3_result" id="s3_result_fail" value="Fail"></td>
+        </tr>
+        <tr>
+          <th class="text-center" scope="row">4</th>
+          <td>Inserting the portable 
+            memory </td>
+          <td>1. Confirm that the “OLYMPUS” mark on the portable memory faces upward and 
+            insert it into the portable memory port until it stops. <br>2. Confirm the portable memory access indicator on the front panel is blinking.</td>
+            <td class="text-center">Pass<input type="radio" formControlName="s4_result" id="s4_result_pass" value="Pass">
+                Fail<input type="radio" formControlName="s4_result" id="s4_result_fail" value="Fail"></td>
+        </tr>
+        <tr>
+          <th class="text-center" scope="row">5</th>
+          <td>
+            Monitor display 
+            inspection and Inspection 
+            of data display on 
+            monitor </td>
+          <td>1. Operate the monitor and confirm that the endoscopic image is displayed properly. <br>
+ 
+            2. Confirm that Data display is displayed on the monitor. <br>- If Data display does not display, press the SWITCH INFO key on the keyboard to 
+            display the Data display. <br>- If necessary, item of the Data display does not display, set the item to be displayed in 
+            “Custom data display” of user presets <br>
+             
+            3. Confirm that the data and time are displayed correctly. <br>
+             
+            4. When recording exam images in the internal memory of this instrument, make sure 
+            that there is enough free space. </td>
+              <td class="text-center">Pass<input type="radio" formControlName="s5_result" id="s5_result_pass" value="Pass">
+                  Fail<input type="radio" formControlName="s5_result" id="s5_result_fail" value="Fail"><br></td>
+      </tr>
+        <tr>
+          <th class="text-center" scope="row">6</th>
+          <td>Inspection of the endoscopic image</td>
+          <td>1. Before inspection, wipe the lens of endoscope with clean lint-free cloths that moistened with ethanol for disinfection, saline solution or sterilized water.<br>2. If the examination light is not emitted, tap the “Lamp” button on Home > Basic functions. Confirm that the examination light is emitted from the distal end of endoscope.<br>3. Confirm that the illumination is coming from the tip of the endoscope.<br>4. Observe the WLI observation mode on palm.<br>5. Tap the plus/minus button of the Home > Function list > Bright /Color > Brightness 1 tab, and adjust the brightness approximately.<br>6.Confirm that the WLI endoscopic image is displayed without any irregularities such as noise, blur or fog.<br>7. When using an endoscope with bent part, bend the bent part by operating endoscope. Confirm that the WLI endoscopic image is displayed without any irregularities such as momentary disappear.<br>8. Make sure that up, down, right and left of distal end of endoscope and displayed endoscope image on observation monitor are same direction.</td>
+          <td class="text-center">Pass<input type="radio" formControlName="s6_result" id="s6_result_pass" value="Pass">
+            Fail<input type="radio" formControlName="s6_result" id="s6_result_fail" value="Fail"></td>
+        </tr>
+        <tr>
+          <th class="text-center" scope="row">7</th>
+          <td>Inspection of the brightness adjustment Function (Automatic brightness adjustment) </td>
+          <td>1. If the examination light is not emitted, press the Lamp button on the front panel to turn 
+            on it. <br>
+             
+            2. Confirm that the brightness mode indicator is OFF. When it lights up, press the 
+            brightness mode button to turn it OFF. <br>
+             
+            3. Confirm that the brightness changes according to setting value with pressing the 
+            minus button and plus button of the “Brightness” respectively. <br>
+             
+            4. Keep the distance between the endoscope tip and the object constant. And with 
+            pressing the minus button and plus button of the “Brightness” respectively, confirm that 
+            the brightness changes according to setting value. </td>
+          <td class="text-center">Pass<input type="radio" formControlName="s7_result" id="s7_result_pass" value="Pass">
+              Fail<input type="radio" formControlName="s7_result" id="s7_result_fail" value="Fail"></td>
+        </tr>
+
+        <tr>
+          <th class="text-center" scope="row">8</th>
+          <td>Inspection of the brightness adjustment Function (Manual brightness adjustment)</td>
+          <td>1.. If the examination light is not emitted, press the Lamp button on the front panel to turn 
+            on it. <br>
+             
+            2. Confirm that the brightness mode indicator is OFF. When it lights up, press the 
+            brightness mode button to turn it OFF. <br>
+             
+            3. Confirm that the brightness changes according to setting value with pressing the 
+            minus button and plus button of the “Brightness” respectively. </td>
+          <td class="text-center">Pass<input type="radio" formControlName="s8_result" id="s8_result_pass" value="Pass">
+            Fail<input type="radio" formControlName="s8_result" id="s8_result_fail" value="Fail"></td>
+        </tr>
+        <tr>
+          <th class="text-center" scope="row">9</th>
+          <td>Inspection of the freeze function</td>
+          <td>1. Press the FREEZE key on the keyboard or the custom switch assigned to the freeze 
+            function. <br>
+             
+            2. Confirm that the live endoscopic image freezes and a short beep is heard. <br>
+             
+            3. Press again the FREEZE key or the custom switch assigned to the freeze function 
+            and confirm that image returns to the live endoscopic image. </td>
+          <td class="text-center">Pass<input type="radio" formControlName="s9_result" id="s9_result_pass" value="Pass">
+            Fail<input type="radio" formControlName="s9_result" id="s9_result_fail" value="Fail"></td>
+        </tr>
+
+        <tr>
+            <th class="text-center" scope="row" >10</th>
+            <td>Inspection of the release function</td>
+            <td>1. Turn on the peripheral devices used for recording destination at the release. <br>
+ 
+              2. Press the RELEASE key on the keyboard or the custom switch assigned to the 
+              release function. <br>
+               
+              3. Confirm that the status changes to the recording mark. <br>
+               
+              4. Confirm video recorder is in the state of recording <br>
+               
+              5. Press the Rec key on the keyboard or the custom switch assigned to the recording 
+              function to pause recording. <br>
+               
+              6. Confirm that the status becomes the pause mark. <br>
+               
+              7. Confirm video recorder is in the state of pause. </td>
+            <td class="text-center">Pass<input type="radio" formControlName="s10_result" id="s10_result_pass" value="Pass">
+                Fail<input type="radio" formControlName="s10_result" id="s10_result_fail" value="Fail"></td>
+        </tr>
+        <tr>
+          <th class="text-center" scope="row" >11</th>
+          <td>Inspection of the recording function</td>
+          <td>1. Turn the peripheral device ON.<br>
+            2. Press the Rec key on the keyboard or the custom switch assigned to the 
+            recording/pause function <br>
+             
+            3. Confirm that the status changes to the recording mark. <br>
+             
+            4. Confirm video recorder is in the state of recording <br>
+             
+            5. Press the Rec key on the keyboard or the custom switch assigned to the recording 
+            function to pause recording. <br>
+             
+            6. Confirm that the status becomes the pause mark.<br> 
+             
+            7. Confirm video recorder is in the state of pause. </td>
+          <td class="text-center">Pass<input type="radio" formControlName="s11_result" id="s11_result_pass" value="Pass">
+              Fail<input type="radio" formControlName="s11_result" id="s11_result_fail" value="Fail"></td>
+      </tr>
+        <tr>
+          <th class="text-center" scope="row" >12</th>
+          <td>Inspection of the 
+            recording function on the 
+            video system centre </td>
+          <td>1.Press the custom switch assigned to the recording (internal memory) start/stop 
+            function. <br>
+             
+            2. Confirm that recording has started and that the recording icon appears on the monitor <br>
+             
+            3. Press the custom switch assigned to start/stop recording (internal memory) function 
+            to stop recording and confirm that the recording icon on the observation monitor 
+            disappears .</td>
+          <td class="text-center">Pass<input type="radio" formControlName="s12_result" id="s12_result_pass" value="Pass">
+              Fail<input type="radio" formControlName="s12_result" id="s12_result_fail" value="Fail"></td>
+        </tr>
+        <tr>
+          <th class="text-center" scope="row" >13</th>
+          <td>
+            Inspection of the 
+            endoscopic image 
+            rotation function </td>
+          <td>Make sure the endoscopic image is rotated 180°. <br> 
+ 
+            1. Press the custom switch to which the endoscopic image rotation function is assigned. <br> 
+            2. Confirm that the endoscopic image is rotated 180° on the monitor. <br> 
+            3. Confirm the displaying “ ʁ ” icon on the monitor, throughout rotating 180°. <br> 
+             
+            4. Display the endoscopic image which is not rotated 180° by pressing the custom 
+            switch to which the endoscopic image rotation function is assigned again. </td>
+          <td class="text-center">Pass<input type="radio" formControlName="s13_result" id="s13_result_pass" value="Pass">
+              Fail<input type="radio" formControlName="s13_result" id="s13_result_fail" value="Fail"></td>
+        </tr>
+        <tr>
+          <th class="text-center" scope="row" >14</th>
+          <td>Inspection of the custom switches </td>
+          <td>1. Press the MENU key on the keyboard to display the Home screen. Select “Switch 
+            information” on the home screen with the Arrow keys and press the Enter key. <br>
+             
+            2. Confirm that the intended function is assigned to each custom switch. <br>
+            3. Press the Enter key to end the display of switch information. <br>
+             
+             
+            4. Confirm that the functions assigned to each custom switch works properly by 
+            pushing (pressing) the custom switch </td>
+          <td class="text-center">Pass<input type="radio" formControlName="s14_result" id="s14_result_pass" value="Pass">
+            Fail<input type="radio" formControlName="s14_result" id="s14_result_fail" value="Fail"></td>
+        </tr>
+        <tr>
+          <th class="text-center" scope="row">15</th>
+          <td>Inspection of the 
+            optical-digital 
+            observation function 
+            </td>
+          <td>The available optical digital observation is NBI observation. 
+            For observation, endoscopes and equipment that support observation is required. 
+            To use a custom switch, the NBI function must be assigned to the custom switch in 
+            advance. <br>
+             
+            1. Press the custom switch assigned the NBI observation or the observation mode 
+            select button on the front panel. <br>
+             
+            2. Confirm that “NBI” is displayed at the upper right corner of the Endoscopic 
+            image screen and the observation mode selection indicator on the front panel is 
+            set to “On” to indicate that the NBI observation mode is selected. <br>
+             
+            3. Press the custom switch assigned to the NBI observation or the observation mode 
+            select button on the front panel again to return to the WLI observation mode 
+          </td>
+              <td class="text-center">Pass<input type="radio" formControlName="s15_result" id="s15_result_pass" value="Pass">
+                  Fail<input type="radio" formControlName="s15_result" id="s15_result_fail" value="Fail"></td>
+      </tr>
+      <tr>
+        <th class="text-center" scope="row">16</th>
+        <td>After Inspection </td>
+        <td>1. Display the Maintenance screen. <br>
+ 
+          2. Select “Format internal memory” with the Arrow keys and press the Enter key on the 
+          Maintenance screen. <br>
+           
+          3. The pop-up screen for confirmation to format appears. Select “Yes” and press the 
+          Enter key. <br>
+           
+          4. After the progress of formatting is displayed, popup screen of completion to initialize 
+          appears. Press the Enter key to end. <br>
+           
+          5. If the video system centre will not be used immediately, press the power switch on 
+          the front panel of the video system centre to turn it OFF 
+        </td>
+            <td class="text-center">Pass<input type="radio" formControlName="s15_result" id="s15_result_pass" value="Pass">
+                Fail<input type="radio" formControlName="s15_result" id="s15_result_fail" value="Fail"></td>
+    </tr>
+        <tr>
+          <th scope="row"><b>REMARKS:</b></th>
+          <td colspan="4">
+              <textarea style="width:99%;resize: none;" formControlName="remarks" ></textarea>
+          </td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="table table-border">
+    <thead>
+      <tr>
+        <th scope="col" id="ib">INSPECTD BY</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td scope="row" id="ib_d"><input style="border-radius: 10px;" type="text" autocomplete="off" formControlName="insBy"></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="text-center mt-5">
+    <div id="image">
+    </div>
+    <button id="btn" class="btn btn-success mt-2" type="submit" style="width:120px" (click)="download()"><span></span> Download</button>
+  </div>
+</form>
+</body>
+</html>
