@@ -7,7 +7,7 @@ import {
 } from "@angular/forms";
 import * as pdfMake from "pdfmake/build/pdfmake";
 import * as pdfFonts from "pdfmake/build/vfs_fonts";
-(pdfMake as any).vfs = pdfFonts.pdfMake.vfs;
+(pdfMake as any).vfs = pdfFonts.vfs;
 import { CommonModule, formatDate } from "@angular/common";
 import { Renderer2 } from "@angular/core";
 import { Location } from "@angular/common";
@@ -15,14 +15,14 @@ import { Router } from "@angular/router";
 import { Content } from "pdfmake/interfaces";
 import { PopUpService } from "../add-more-page/popup.service";
 
-(pdfMake as any).vfs = pdfFonts.pdfMake.vfs;
+(pdfMake as any).vfs = pdfFonts.vfs;
 
 @Component({
   selector: "app-pcf-h190-tl",
   templateUrl: "./pcf-h190-tl.component.html",
   styleUrls: ["./pcf-h190-tl.component.css"],
-  imports:[FormsModule,ReactiveFormsModule,CommonModule],
-  standalone:true
+  imports: [FormsModule, ReactiveFormsModule, CommonModule],
+  standalone: true
 })
 export class PCFH190TLComponent {
   formGroup: any;

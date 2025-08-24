@@ -2,11 +2,11 @@ import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { HeaderComponent } from "./header/header.component.spec";
 import { DashboardLayoutComponent } from './dashboard-layout/dashboard-layout.component';
-import {  ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
-import {  WebcamModule } from 'ngx-webcam';
+import { WebcamModule } from 'ngx-webcam';
+import { HeaderComponent } from './header/header.component';
 
 
 
@@ -20,6 +20,6 @@ import {  WebcamModule } from 'ngx-webcam';
     RouterModule,
     ReactiveFormsModule,
     WebcamModule
-  ],exports:[DashboardLayoutComponent]
+  ], exports: [DashboardLayoutComponent]
 })
 export class LayoutModule { }
