@@ -230,7 +230,8 @@ const routes: Routes = [
   {path:'PCF-H190TL',loadComponent:()=>import('./pcf-h190-tl/pcf-h190-tl.component').then(m => m.PCFH190TLComponent)},
   {path:'ENF-V4',loadComponent:()=>import('./enf-v4/enf-v4.component').then(m => m.ENFV4Component)},//new format 9
 
-  {path: 'OTV-S500', loadComponent:()=>import('./OTV-S500/OTV-S500.component').then(m => m.Otvs500Component)}
+  {path: 'OTV-S500', loadComponent:()=>import('./OTV-S500/OTV-S500.component').then(m => m.Otvs500Component)},// new added
+  {path: 'GIF-XZ1200', loadComponent:()=>import('./gif-xz1200/gif-xz1200.component').then(m => m.Gifxz1200Component)}
 
   ]}
 

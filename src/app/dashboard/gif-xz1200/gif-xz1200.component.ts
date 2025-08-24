@@ -18,7 +18,7 @@ import { PopUpService } from '../add-more-page/popup.service';
   imports: [FormsModule, ReactiveFormsModule, CommonModule],
   standalone: true
 })
-export class Gifez1500Component {
+export class Gifxz1200Component {
   formGroup: any;
   startTime: any;
   endTime: any;
