@@ -95,6 +95,7 @@ export class HeaderComponent {
         "GIF-XP170N",
         "GIF-XP180N",
         "GIF-XP190N",
+        "GIF-XZ1200",
         "GIF-XTQ160",
         "IMH-10",
         "IMH-20",
