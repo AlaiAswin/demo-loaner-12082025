@@ -95,6 +95,8 @@ export class Otvs500Component {
       let s13 = data['s13_result'];
       let s14 = data['s14_result'];
       let s15 = data['s15_result'];
+      let s16 = data['s16_result'];
+      let s17 = data['s17_result'];
 
 
 
