@@ -171,6 +171,7 @@ const routes: Routes = [
     {path:'ESG-300',loadComponent:()=>import('./ESG-300/ESG-300.component').then(m => m.Esg300component)},//New format 9
     {path:'APU-300',loadComponent:()=>import('./APU-300/APU-300.component').then(m => m.Apu300component)},//New format 9
     {path:'ESG-400',loadComponent:()=>import('./ESG-400/ESG-400.component').then(m => m.Esg400component)},//New format 9
+    {path:'ESG-410',loadComponent:()=>import('./ESG-410/ESG-410.component').then(m => m.Esg410component)},//New format 10
     {path:'NEUROSCOPES',loadComponent:()=>import('./NEUROSCOPES/NEUROSCOPES.component').then(m => m.Neuroscopescomponent)},//New format 8
     {path:'OPTICAL_FORCEPS',loadComponent:()=>import('./OPTICAL_FORCEPS/OPTICAL_FORCEPS.component').then(m => m.Opticalforcepscomponent)},//New format 6
     {path:'PEDIATRIC_UROLOGY&OPTICAL_URETHROTOME',loadComponent:()=>import('./PEDIATRIC_UROLOGY&OPTICAL_URETHROTOME/PEDIATRIC_UROLOGY&OPTICAL_URETHROTOME.component').then(m => m.Pediatriccomponent)},//New format 6
